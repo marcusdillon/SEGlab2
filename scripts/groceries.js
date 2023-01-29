@@ -157,7 +157,7 @@ function restrictListProducts(prods, restriction) {
 		final_list.push(current_product);
 
 	}
-	return product_names;
+	return final_list;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
