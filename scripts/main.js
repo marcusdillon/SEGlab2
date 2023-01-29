@@ -70,8 +70,8 @@ function selectedItems(){
 	
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
-	
-	
+	var tempChosenProducts = [];
+	var myChosenProductString = "";
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
 	
@@ -83,8 +83,10 @@ function selectedItems(){
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
-			var tempChosenProducts = ele[i].value.split('~');
-			chosenProducts.push(tempChosenProducts[0]);
+			tempChosenProducts = ele[i].value.split('~');
+			myChosenProductString = tempChosenProduct[0];
+			myChosenProductString = myChosenProductString.trim();
+			chosenProducts.push(myChosenProductString);
 		}
 	}
 		
