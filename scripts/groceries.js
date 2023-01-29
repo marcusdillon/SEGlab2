@@ -105,7 +105,6 @@ function restrictListProducts(prods, restriction) {
 	let product_price = 0;
 	let product_price_text = "";
 	let product_price_name = "";
-	let proudct_names_pre_sort = [];
 	
 	for (let i=0; i<prods.length; i+=1) {
 // 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
@@ -134,19 +133,11 @@ function restrictListProducts(prods, restriction) {
 			product_price_text = product_price.toString();
 			product_price_name = prods[i].name.concat(" ~ (", product_price_text,"$)");
 			product_names.push(product_price_name);
-			product_names_pre_sort.push(prods[i].name);
 			
 		}
 	}
 	return product_names;
 }
-
-function getSortedProducts (productList) {
-	let pre_sort = productList;
-	
-	return pre_sort;
-}
-
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
