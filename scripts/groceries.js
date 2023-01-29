@@ -105,6 +105,7 @@ function restrictListProducts(prods, restriction) {
 	let product_price = 0;
 	let product_price_text = "";
 	let product_price_name = "";
+	let products_pre_sort = [];
 	
 	for (let i=0; i<prods.length; i+=1) {
 // 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
@@ -129,6 +130,7 @@ function restrictListProducts(prods, restriction) {
 // 			product_names.push(prods[i].name);
 // 		}
 		if (((restriction == "Vegetarian") && (prods[i].vegetarian == true)) || ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) || ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)) || ((restriction == "Keto") && (prods[i].keto == true)) || ((restriction == "Organic") && (prods[i].organic == true)) || ((restriction == "Non-Organic") && (prods[i].organic == false)) || (restriction == "None")) {
+			products_pre_sort.push(prods[i].name);
 			product_price = prods[i].price;
 			product_price_text = product_price.toString();
 			product_price_name = prods[i].name.concat(" ~ (", product_price_text,"$)");
