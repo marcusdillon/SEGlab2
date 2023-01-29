@@ -131,7 +131,7 @@ function restrictListProducts(prods, restriction) {
 		if (((restriction == "Vegetarian") && (prods[i].vegetarian == true)) || ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) || ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)) || ((restriction == "Keto") && (prods[i].keto == true)) || ((restriction == "Organic") && (prods[i].organic == true)) || ((restriction == "Non-Organic") && (prods[i].organic == false)) || (restriction == "None")) {
 			product_price = prods[i].price;
 			product_price_text = product_price.toString();
-			product_price_name = prods[i].name.concat(" (", product_price_text,"$)");
+			product_price_name = prods[i].name.concat(" ~ (", product_price_text,"$)");
 			product_names.push(product_price_name);
 			
 		}
