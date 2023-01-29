@@ -103,25 +103,28 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "Keto") && (prods[i].keto == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "Organic") && (prods[i].organic == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "Non-Organic") && (prods[i].organic == false)){
-			product_names.push(prods[i].name);
-		}
-		else if (restriction == "None"){
+// 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+// 			product_names.push(prods[i].name);
+// 		}
+// 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
+// 			product_names.push(prods[i].name);
+// 		}
+// 		else if ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)){
+// 			product_names.push(prods[i].name);
+// 		}
+// 		else if ((restriction == "Keto") && (prods[i].keto == true)){
+// 			product_names.push(prods[i].name);
+// 		}
+// 		else if ((restriction == "Organic") && (prods[i].organic == true)){
+// 			product_names.push(prods[i].name);
+// 		}
+// 		else if ((restriction == "Non-Organic") && (prods[i].organic == false)){
+// 			product_names.push(prods[i].name);
+// 		}
+// 		else if (restriction == "None"){
+// 			product_names.push(prods[i].name);
+// 		}
+		if (((restriction == "Vegetarian") && (prods[i].vegetarian == true)) || ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) || ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)) || ((restriction == "Keto") && (prods[i].keto == true)) || ((restriction == "Organic") && (prods[i].organic == true)) || ((restriction == "Non-Organic") && (prods[i].organic == false)) || (restriction == "None")) {
 			product_names.push(prods[i].name);
 		}
 	}
