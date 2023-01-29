@@ -19,29 +19,31 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-<!-- 	<form id="dietSelect" name="dietSelect">
-		<input type="checkbox" name="Vegetarian" value="Vegetarian" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+	<form id="dietSelect" name="dietSelect">
+		<input type="checkbox" id="Vegetarian" name="Vegetarian" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
 		<label for="Vegetarian">Vegetarian</label><br>
 
-		<input type="checkbox" name="GlutenFree" value="GlutenFree" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+		<input type="checkbox" id="GlutenFree" name="GlutenFree" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
 		<label for="GlutenFree">GlutenFree</label><br>
 
-		<input type="checkbox" name="Organic" value="Organic" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+		<input type="checkbox" id="Organic" name="Organic" value="Organic" onclick="populateListProductChoices('Organic', 'displayProduct')">
 		<label for="Organic">Organic</label><br>
 
-		<input type="checkbox" name="LactoseFree" value="LactoseFree" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+		<input type="checkbox" id="Non-Organic" name="Non-Organic" value="Non-Organic" onclick="populateListProductChoices('Non-Organic', 'displayProduct')">
+		<label for="Non-Organic">Non-Organic</label><br>
+
+		<input type="checkbox" id="LactoseFree" name="LactoseFree" value="LactoseFree" onclick="populateListProductChoices('LactoseFree', 'displayProduct')">
 		<label for="LactoseFree">LactoseFree</label><br>
 
-		<input type="checkbox" name="Keto" value="Keto" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+		<input type="checkbox" id="Keto" name="Keto" value="Keto" onclick="populateListProductChoices('Keto', 'displayProduct')">
 		<label for="Keto">Keto</label><br>
 
-		<input type="checkbox" name="Non-Organic" value="Non-Organic" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
-		<label for="Non-Organic">Non-Organic</label><br>
-		
-		<input type="checkbox" name="None" value="None" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+		<input type="checkbox" id="None" name="None" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
 		<label for="None">None</label><br>
-	</form> -->
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+
+		<input type="reset" value="Reset" onclick="populateListProductChoices('', 'displayProduct')">
+    	</form>
+<!-- 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">GlutenFree</option>
@@ -50,7 +52,7 @@
 	<option value="Organic">Organic</option>
 	<option value="Non-Organic">Non-Organic</option>
     <option value="None">None</option>
-	</select>
+	</select> -->
 </div>
 
 <div id="Products" class="tabcontent">
