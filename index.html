@@ -19,7 +19,7 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<form id="dietSelect" name="dietSelect">
+<!-- 	<form id="dietSelect" name="dietSelect">
 		<input type="checkbox" name="Vegetarian" value="Vegetarian" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
 		<label for="Vegetarian">Vegetarian</label><br>
 
@@ -40,8 +40,8 @@
 		
 		<input type="checkbox" name="None" value="None" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
 		<label for="None">None</label><br>
-	</form>
-<!-- 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	</form> -->
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">GlutenFree</option>
@@ -50,7 +50,7 @@
 	<option value="Organic">Organic</option>
 	<option value="Non-Organic">Non-Organic</option>
     <option value="None">None</option>
-	</select> -->
+	</select>
 </div>
 
 <div id="Products" class="tabcontent">
