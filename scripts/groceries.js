@@ -108,6 +108,9 @@ function restrictListProducts(prods, restriction) {
 	let products_pre_sort = [];
 	let final_list = [];
 	let current_product = "";
+	let current_product_name_price = "";
+	let current_product_price = 0;
+	let current_product_price_text = "";
 	
 	
 	for (let i=0; i<prods.length; i+=1) {
@@ -145,8 +148,10 @@ function restrictListProducts(prods, restriction) {
 	for (let x = 0; x < products_pre_sort.length; x+=1) {
 		current_product = products_pre_sort[x];
 		for (let y = 0; y < products_pre_sort.length; y+=1) { 
-			if (products_pre_sort[y] < products_pre_sort[x]) {
-				current_product = products_pre_sort[y];
+			if (products_pre_sort[y].price < products_pre_sort[x].price) {
+				current_product_price = products_pre_sort[y].price;
+				current_product_price_text = current_product_price.toString();
+				current_product = products_pre_sort[y].name.concat(" ~ (", current_product_price_text,"$)");
 			}
 		}
 		final_list.push(current_product);
