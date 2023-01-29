@@ -71,6 +71,7 @@ function selectedItems(){
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
 	
+	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
 	
@@ -82,7 +83,8 @@ function selectedItems(){
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
+			var tempChosenProducts = ele[i].value.split('~');
+			chosenProducts.push(tempChosenProducts[0]);
 		}
 	}
 		
