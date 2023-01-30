@@ -151,8 +151,7 @@ function restrictListProducts(prods, restriction) {
 			if (products_pre_sort[y].price < products_pre_sort[x].price) {
 				current_product_price = products_pre_sort[y].price;
 				current_product_price_text = current_product_price.toString();
-				current_product = current_product_price_text;
-				//current_product = products_pre_sort[y].name.concat(" ~ (", current_product_price_text,"$)");
+				current_product = products_pre_sort[y].name.concat(" ~ (", current_product_price_text,"$)");
 			}
 		}
 		final_list.push(current_product);
