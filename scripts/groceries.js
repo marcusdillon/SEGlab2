@@ -106,9 +106,6 @@ function restrictListProducts(prods, restriction) {
 	let product_price_text = "";
 	let product_price_name = "";
 	let products_pre_sort = [];
-	let final_list = [];
-	let current_product = "";
-	
 	
 	for (let i=0; i<prods.length; i+=1) {
 // 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
@@ -140,17 +137,6 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(product_price_name);
 			
 		}
-	}
-	
-	for (let x = 0; x < products_pre_sort.length; x+=1) {
-		current_product = products_pre_sort[x];
-		for (let y = 0; y < products_pre_sort.length; y+=1) { 
-			if (products_pre_sort[y] < products_pre_sort[x]) {
-				current_product = products_pre_sort[y];
-			}
-		}
-		final_list.push(current_product);
-
 	}
 	return product_names;
 }
